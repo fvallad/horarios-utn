@@ -24,8 +24,7 @@ export default function Login() {
     <div className="login-page">
       <div className="login-card">
         <div className="login-logo">
-          <div className="logo-mark">UTN</div>
-          <div className="logo-sub">PROFESORADO</div>
+          <img src="/logo-dark.png" alt="Logo UTN" className="login-logo-img" />
         </div>
         <h1 className="login-title">Cronograma 2026</h1>
         <p className="login-subtitle">Ingresá con tu cuenta institucional</p>

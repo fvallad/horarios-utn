@@ -39,17 +39,13 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
   position: sticky; top: 0; height: 100vh;
 }
 .sidebar-brand {
-  display: flex; align-items: center; gap: 10px;
-  padding: 20px 16px 18px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 18px 16px 16px;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
-.brand-mark {
-  background: var(--blue); color: #fff;
-  font-family: 'DM Mono', monospace; font-weight: 500; font-size: 13px;
-  padding: 4px 8px; border-radius: 6px; letter-spacing: 1px;
+.sidebar-logo-img {
+  max-height: 48px; max-width: 160px; object-fit: contain;
 }
-.brand-title { display: block; color: #fff; font-weight: 600; font-size: 13px; line-height: 1.2; }
-.brand-sub   { display: block; color: rgba(255,255,255,.45); font-size: 11px; }
 
 .sidebar-nav { flex: 1; padding: 12px 8px; display: flex; flex-direction: column; gap: 2px; }
 .nav-item {
@@ -109,9 +105,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
   background: #fff; border-radius: 16px; padding: 40px 36px;
   width: 380px; box-shadow: var(--shadow-lg);
 }
-.login-logo  { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
-.logo-mark   { background: var(--navy); color: #fff; font-family: 'DM Mono', monospace; font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 8px; letter-spacing: 2px; }
-.logo-sub    { font-size: 11px; color: var(--text-sm); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.login-logo     { display: flex; justify-content: center; margin-bottom: 24px; }
+.login-logo-img { max-height: 64px; max-width: 180px; object-fit: contain; }
 .login-title    { font-size: 22px; font-weight: 700; color: var(--navy); }
 .login-subtitle { font-size: 13px; color: var(--text-sm); margin-top: 4px; margin-bottom: 28px; }
 .login-form  { display: flex; flex-direction: column; gap: 16px; }
