@@ -6,6 +6,16 @@ import Dashboard from './pages/Dashboard'
 import Horarios from './pages/Horarios'
 import Calendario from './pages/Calendario'
 import Profesores from './pages/Profesores'
+import ProfesoresABM from './pages/ProfesoresABM'
+import Usuarios from './pages/Usuarios'
+import AuditLog from './pages/AuditLog'
+
+function AdminRoute({ children }) {
+  const { isAdmin, loading } = useAuth()
+  if (loading) return null
+  if (!isAdmin) return <Navigate to="/" replace />
+  return children
+}
 
 function ProtectedLayout() {
   const { user, loading } = useAuth()
@@ -16,10 +26,13 @@ function ProtectedLayout() {
       <Sidebar />
       <main className="app-main">
         <Routes>
-          <Route path="/"           element={<Dashboard />} />
-          <Route path="/horarios"   element={<Horarios />} />
-          <Route path="/calendario" element={<Calendario />} />
-          <Route path="/profesores" element={<Profesores />} />
+          <Route path="/"                   element={<Dashboard />} />
+          <Route path="/horarios"           element={<Horarios />} />
+          <Route path="/calendario"         element={<Calendario />} />
+          <Route path="/profesores-vista"   element={<Profesores />} />
+          <Route path="/profesores-abm"     element={<AdminRoute><ProfesoresABM /></AdminRoute>} />
+          <Route path="/usuarios"           element={<AdminRoute><Usuarios /></AdminRoute>} />
+          <Route path="/audit"              element={<AdminRoute><AuditLog /></AdminRoute>} />
         </Routes>
       </main>
     </div>
@@ -39,7 +52,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
-          <Route path="/*" element={<ProtectedLayout />} />
+          <Route path="/*"     element={<ProtectedLayout />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

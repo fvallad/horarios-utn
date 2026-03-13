@@ -15,7 +15,7 @@ from supabase import create_client
 
 # ── Configurá estos valores ──────────────────────────────────
 SUPABASE_URL = "https://cknifwdwtenhfwfvkwyw.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNrbmlmd2R3dGVuaGZ3ZnZrd3l3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzQxNTg1MywiZXhwIjoyMDg4OTkxODUzfQ.PSSkUdIf46V1_UXiExe5duxrqhGbWWw9gEp8CxHDoSk"   # usá la service_role key para carga inicial
+SUPABASE_KEY = "TU_SERVICE_ROLE_KEY"   # usá la service_role key para carga inicial
 EXCEL_PATH   = "Horarios2026.xlsx"     # path al archivo Excel
 # ─────────────────────────────────────────────────────────────
 
